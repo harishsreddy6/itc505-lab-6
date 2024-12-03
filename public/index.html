@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Video Background -->
+    <video autoplay muted loop id="background-video">
+        <source src="/video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Header -->
+    <header>
+        <h1>Weather Dashboard</h1>
+    </header>
+
+    <!-- Main Layout -->
+    <div class="container">
+        <!-- Sidebar -->
+        <aside>
+            <ul>
+                <li><a href="#" onclick="showHome()">Home</a></li>
+                <li><a href="#" onclick="showForecast()">Forecast</a></li>
+                <li><a href="#" onclick="showAbout()">About</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main id="content">
+            <h2>Get Weather Information</h2>
+            <div class="weather-input">
+                <label for="city">Enter City Name: </label>
+                <input type="text" id="city" placeholder="e.g., New York">
+                <button onclick="getWeather()">Get Weather</button>
+            </div>
+
+            <div id="weather-info"></div>
+            <div id="forecast-info"></div>
+        </main>
+
+        <!-- Advertisement -->
+        <aside>
+            <a href="https://www.amazon.com/Field-Guide-Weather-Forecast-Identify/dp/1591938244/ref=sr_1_3?crid=3DE00OF59PVGW&dib=eyJ2IjoiMSJ9.5hgl0x68-Ff6iu1KZROT7rLThMqYbOaTYisjWkW-DNVRxvk3KQa0yfg5dMfkLMfhlcuf2Mgu_vqyWEW8vIMuR3GOZ0mCnoapqMCj47-61IMedVOwPhK-659M15aDyoqGZlCyGb0KvOqcF5PewW5Iwc3desInAHQn7tASFs2utIMMu-m-dxVkpkSg1Ut-UIlwMsRxvoHtjtbq9PLr0Gqq925NZhycsmWo4X984Y5BgUFyBhk-BCzjRcOXLyC9NzjuijYB9_y54aWCSBRw79_l2t9tSt5Q3rVt6qgyHd0QoNY.DgltVMu6Iaf1XELS6yWf-W_AgxEjIsBcAaIwi8gMrgI&dib_tag=se&keywords=weather+books&qid=1731195059&sprefix=weather+books%2Caps%2C243&sr=8-3" target="_blank">
+                <img src="https://m.media-amazon.com/images/I/71Lykmv0YRL._AC_UL480_FMwebp_QL65_.jpg" alt="Advertisement">
+            </a>
+        </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Weather Dashboard - Last modified: <span id="last-modified"></span></p>
+        <p>Developed by Harish Subbaramaiah</p>
+        <button id="toggleAddendumBtn">Addendum</button>
+    </footer>
+
+    
+<!-- Addendum Section (Initially Hidden) -->
+<div id="addendum" style="display: none;">
+    <h3>Technical Details</h3>
+    <p><strong>Technologies Used:</strong></p>
+    <ul>
+        <li><strong>Frontend:</strong> HTML, CSS, JavaScript (Vanilla JS)</li>
+        <li><strong>Backend:</strong> Node.js, Express</li>
+        <li><strong>API:</strong> OpenWeather API for weather data</li>
+    </ul>
+    <p><strong>App Workflow:</strong></p>
+    <p>The app allows users to get real-time weather data and a 5-day forecast for any city...</p>
+    <p><strong>Key Features:</strong></p>
+    <ul>
+        <li>User-friendly interface for real-time weather updates.</li>
+        <li>5-day weather forecast feature.</li>
+        <li>Responsive design to work on various screen sizes.</li>
+    </ul>
+    <p><strong>Technological Challenges:</strong></p>
+    <ul>
+        <li>Fetching data from a third-party API and handling asynchronous responses efficiently.</li>
+    </ul>
+    <p><strong>Design Considerations:</strong></p>
+    <ul>
+        <li>Minimalistic design to ensure ease of use and quick interaction.</li>
+    </ul>
+</div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
